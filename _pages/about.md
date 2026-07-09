@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Teaching Faculty with <a href='https://www.umass.edu/public-policy/dacss'>UMass DACSS</a>.
 
 profile:
   align: right
