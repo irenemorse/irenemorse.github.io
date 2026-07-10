@@ -908,6 +908,26 @@ div.cell.selected:before {
   height: 100%;
 }
 
+div.prompt,
+.prompt {
+  font-family: monospace, monospace;
+  font-size: 9pt !important;
+  font-weight: normal;
+  color: #828892;
+  line-height: 170%;
+  padding: 0px;
+  padding-top: 4px;
+  padding-left: 0px;
+  padding-right: 1px;
+  text-align: right !important;
+  min-width: 11.5ex !important;
+  width: 11.5ex !important;
+}
+
+div.cell.selected .prompt {
+  top: 0;
+}
+
 pre,
 code,
 kbd,
@@ -1140,6 +1160,44 @@ div#pager pre {
   background: #ededed !important;
   background-color: #ededed !important;
   padding: 0.4em;
+}
+
+
+.ansi-black-fg {
+  color: #e22978;
+}
+
+
+.ansi-blue-fg,
+.ansi-blue-intense-fg {
+  color: #009e07;
+}
+
+
+.ansi-green-fg {
+  color: #333333;
+}
+
+.ansi-green-intense-fg {
+  color: #ff8132;
+}
+
+
+.ansi-cyan-fg,
+.ansi-cyan-intense-fg {
+  color: #653bc5;
+}
+
+
+.ansi-yellow-fg,
+.ansi-yellow-intense-fg {
+  color: #ff8132;
+}
+
+
+.ansi-red-fg,
+.ansi-red-intense-fg {
+  color: #de143d;
 }
 
 
