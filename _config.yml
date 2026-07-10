@@ -240,6 +240,7 @@ exclude:
   - migrations/
   - vendor
   - _pages/repositories.md
+  - _books
 keep_files:
   - CNAME
   - .nojekyll
