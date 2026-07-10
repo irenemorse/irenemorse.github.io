@@ -327,17 +327,17 @@ terser:
 # Jekyll Archives
 # -----------------------------------------------------------------------------
 
-jekyll-archives:
-  posts:
-    enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
-    permalinks:
-      year: "/blog/:year/"
-      tags: "/blog/:type/:name/"
-      categories: "/blog/:type/:name/"
-  books:
-    enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
+#jekyll-archives:
+#  posts:
+#    enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
+#    permalinks:
+#      year: "/blog/:year/"
+#      tags: "/blog/:type/:name/"
+#      categories: "/blog/:type/:name/"
+#  books:
+#    enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
 
-display_tags: ["tidytuesday", "datavisualization", "python", "r", "timeseries", "datacleaning", "regression", "textasdata"] # these tags will be displayed on the front page of your blog
+#display_tags: ["tidytuesday", "datavisualization", "python", "r", "timeseries", "datacleaning", "regression", "textasdata"] # these tags will be displayed on the front page of your blog
 #display_categories: ["external-services"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
