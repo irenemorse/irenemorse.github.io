@@ -8,11 +8,9 @@ cv_pdf: /assets/pdf/Irene_Morse_CV_public.pdf # path to your CV PDF file
 #scholar_userid: qc6CJjYAAAAJ # your Google Scholar ID
 # wechat_qr: # filename of your wechat qr-code saved as an image (e.g., wechat-qr.png if saved to assets/img/wechat-qr.png)
 # whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
-custom_social: # can be any name here other than the ones already defined in the jekyll-socials plugin
-  logo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS7gME06ln7Wb6cFIZayFk9C00QkhyjQJr1Eqqj3N5_Q&s=10 # can be png, svg, jpg
-  title: GitHub
-  url: https://github.com/irenemorse
+github_username: https://github.com/irenemorse
+linkedin_username: https://www.linkedin.com/in/irene-morse-3a899890
 #custom_social: # can be any name here other than the ones already defined in the jekyll-socials plugin
-#  logo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnEp8RbC5yMEIIfXnIa2Kr--46fkxX_K25F5yXdSHToQ&s # can be png, svg, jpg
-#  title: LinkedIn
-#  url: https://www.linkedin.com/in/irene-morse-3a899890
+#  logo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS7gME06ln7Wb6cFIZayFk9C00QkhyjQJr1Eqqj3N5_Q&s=10 # can be png, svg, jpg
+#  title: GitHub
+#  url: https://github.com/irenemorse

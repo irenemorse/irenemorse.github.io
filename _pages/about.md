@@ -28,6 +28,4 @@ latest_posts:
 
 Irene Morse is an incoming member of the DACSS teaching faculty at UMass Amherst. She earned her PhD and MA in Political Science from the University of Michigan and her BS in International Political Economy from UT Dallas. Her research focuses on individual-level experiences of authoritarianism, with a special focus on the Middle East and Turkey in comparative perspective. She also specializes in quantitative text analysis and expansion of NLP resources to languages other than English. Finally, she has a passion for teaching and improving pedagogy in the Social Sciences by empowering students from diverse backgrounds to take ownership of their own learning.
 
-Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
 Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
