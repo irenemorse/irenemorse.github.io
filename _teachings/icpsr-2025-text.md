@@ -1,7 +1,7 @@
 ---
 layout: course
-title: Data Science and Text Analysis (TA)
-instructor: Prof. Yaoyao Dai
+title: Data Science and Text Analysis
+instructor: TA for Prof. Yaoyao Dai
 year: 2025
 term: ICPSR Summer Program
 course_id: icpsr-2025-text
