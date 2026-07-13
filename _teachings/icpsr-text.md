@@ -6,6 +6,7 @@ instructor: Prof. Yaoyao Dai
 year: 2026
 term: ICPSR Summer Program
 course_id: icpsr-text
+categories: icpsr methods data-science
 ---
 
 ## Course Overview
