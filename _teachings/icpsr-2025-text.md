@@ -1,11 +1,10 @@
 ---
 layout: course
-title: (TA) Data Science and Text Analysis
-description: This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.
+title: Data Science and Text Analysis (TA)
 instructor: Prof. Yaoyao Dai
-year: 2026
+year: 2025
 term: ICPSR Summer Program
-course_id: icpsr-text
+course_id: icpsr-2025-text
 category: methods
 ---
 
