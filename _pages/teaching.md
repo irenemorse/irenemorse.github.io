@@ -4,7 +4,7 @@ permalink: /teaching/
 title: 
 description: 
 nav: true
-nav_order: 5
+nav_order: 3
 calendar: true
 ---
 
