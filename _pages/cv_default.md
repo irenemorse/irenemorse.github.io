@@ -1,6 +1,6 @@
 ---
 layout: cv
-permalink: /cv/
+permalink: /cv_default/
 title: CV
 subtitle: Teaching Faculty with <a href='https://www.umass.edu/public-policy/dacss'>UMass DACSS</a>.
 nav: false
