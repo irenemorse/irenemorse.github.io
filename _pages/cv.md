@@ -1,7 +1,7 @@
 ---
-layout: cv
+layout: page
 permalink: /cv/
-title: CV
+title: cv
 subtitle: Teaching Faculty with <a href='https://www.umass.edu/public-policy/dacss'>UMass DACSS</a>.
 nav: true
 nav_order: 6
@@ -12,4 +12,4 @@ cv_pdf: /assets/pdf/Irene_Morse_CV_public.pdf # you can also use external links 
 #  sidebar: left
 ---
 
-Adding content here
+My CV is available [here](/assets/pdf/Irene_Morse_CV_public.pdf){:target="_blank"}.
