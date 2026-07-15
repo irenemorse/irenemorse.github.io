@@ -27,3 +27,12 @@ latest_posts:
 ---
 
 Irene Morse is an incoming member of the DACSS teaching faculty at UMass Amherst. She earned her PhD and MA in Political Science from the University of Michigan and her BS in International Political Economy from UT Dallas. Her research focuses on individual-level experiences of authoritarianism, with a special focus on the Middle East and Turkey in comparative perspective. She also specializes in quantitative text analysis and expansion of NLP resources to languages other than English. Finally, she has a passion for teaching and improving pedagogy in the Social Sciences by empowering students from diverse backgrounds to take ownership of their own learning.
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll('a[href$=".pdf"]').forEach(function (link) {
+    link.setAttribute("target", "_blank");
+    link.setAttribute("rel", "noopener noreferrer");
+  });
+});
+</script>
