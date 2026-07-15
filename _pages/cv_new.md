@@ -10,6 +10,7 @@ nav_order: 6
 #description: This is a description of the page. You can modify it in '_pages/cv.md'. You can also change or remove the top pdf download button.
 #toc:
 #  sidebar: left
+redirect: /assets/pdf/Irene_Morse_CV_public.pdf
 ---
 
 My cv is available [here](/assets/pdf/Irene_Morse_CV_public.pdf){:target="_blank"}.
