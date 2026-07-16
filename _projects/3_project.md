@@ -2,7 +2,7 @@
 layout: page
 title: Opposition Response to Term Limit Subversion and Democratic Backsliding - Evidence from Côte d'Ivoire
 description: Co-authored with Dr. Justine Davis
-img: assets/img/ggplot_time2.pdf
+img: assets/img/ggplot_time_months.png
 importance: 3
 category: work
 related_publications: true

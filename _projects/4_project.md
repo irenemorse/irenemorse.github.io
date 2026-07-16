@@ -2,7 +2,7 @@
 layout: page
 title: Get Out the Vote with Violence - Online Mobilization in Violent Elections
 description: Co-authored with Dr. Justine Davis
-img: assets/img/V5_violence_over_time.pdf
+img: assets/img/ggplot_time_months.png
 importance: 4
 category: work
 related_publications: true
