@@ -2,7 +2,7 @@
 layout: post
 title: Near-Death Experiences
 date: 2026-07-21
-tags: tidy tuesday
+tags: tidytuesday
 description: 
 categories: tidytuesday
 thumbnail: assets/img/heatmap.png
