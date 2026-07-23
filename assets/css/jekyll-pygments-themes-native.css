@@ -125,10 +125,7 @@
 .highlight .nn {
   color: #447fcf;
   text-decoration: underline;
-} /* Name.Namespace */
-.highlight .nx {
-  color: #d0d0d0;
-} /* Name.Other */
+} /* Name.Namespace */ /* Name.Other */
 .highlight .py {
   color: #d0d0d0;
 } /* Name.Property */
