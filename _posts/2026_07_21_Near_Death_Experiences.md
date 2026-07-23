@@ -1,3 +1,13 @@
+---
+layout: post
+title: Near-Death Experiences
+date: 2026-07-21
+tags: tidy tuesday
+description: 
+categories: tidytuesday
+thumbnail: assets/img/heatmap.png
+---
+
 # Tidy Tuesday for July 21st, 2026
 ## Near-Death Experiences
 ### Irene Morse
