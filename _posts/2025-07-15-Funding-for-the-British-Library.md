@@ -1,6 +1,8 @@
 ---
-title: "Tidy Tuesday for July 15th, 2025"
-subtitle: "Funding for the British Library"
+layout: post
+
+title: "Funding for the British Library"
+subtitle: "Tidy Tuesday for July 15th, 2025"
 author: "Irene Morse"
 date: "2025-07-15"
 output: 
