@@ -1,0 +1,367 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> UFO Sightings | Irene Morse </title> <meta name="author" content="Irene Morse"> <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. "> <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="/assets/img/favicon.png?v=14ab04b9acba7a59dafa345c61d5bae9"> <link rel="stylesheet" href="/assets/css/main.css?v=f0b101217084a90093badfe99ff9a7d1"> <link rel="canonical" href="https://irenemorse.github.io/blog/2025/UFO-Sightings/"> <script src="/assets/js/theme.js?v=7af685e2ba20b37fef545c97b8064050"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Irene</span> Morse </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/teaching/">teaching </a> </li> <li class="nav-item "> <a class="nav-link" href="/research/">research </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">cv </a> </li> <li class="nav-item "> <a class="nav-link" href="/portfolio/index.html">portfolio </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">UFO Sightings</h1> <p class="post-meta"> Created on July 28, 2025 by Irene Morse </p> <p class="post-tags"> <a href="/blog/2025"> <i class="fa-solid fa-calendar fa-sm"></i> 2025 </a>   ·   <a href="/blog/tag/tidytuesday"> <i class="fa-solid fa-hashtag fa-sm"></i> tidytuesday</a>   ·   <a href="/blog/category/tidytuesday"> <i class="fa-solid fa-tag fa-sm"></i> tidytuesday</a> </p> </header> <article class="post-content"> <div id="markdown-content"> <h2 id="setup-and-introduction">Setup and Introduction</h2> <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">readr</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">quanteda</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">quanteda.textplots</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div> <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ufo_sightings</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readr</span><span class="o">::</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-06-20/ufo_sightings.csv'</span><span class="p">)</span><span class="w">
+</span><span class="n">places</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readr</span><span class="o">::</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-06-20/places.csv'</span><span class="p">)</span><span class="w">
+</span><span class="n">day_parts_map</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readr</span><span class="o">::</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-06-20/day_parts_map.csv'</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div> <p><a href="https://github.com/rfordatascience/tidytuesday/blob/main/data/2023/2023-06-20/readme.md" rel="external nofollow noopener" target="_blank">This week’s Tidy Tuesday dataset</a> contains data on UFO sightings across the world (though the USA has by far the largest number of UFO sightings of any country).</p> <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># top 10 countries by UFO sightings</span><span class="w">
+</span><span class="n">summary</span><span class="p">(</span><span class="n">as.factor</span><span class="p">(</span><span class="n">places</span><span class="o">$</span><span class="n">country</span><span class="p">))[</span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>##            USA United Kingdom         Canada      Australia          India 
+##          12063            552            445            185             95 
+##    Netherlands        Germany         Brazil         Mexico    New Zealand 
+##             64             60             47             46             38
+</code></pre></div></div> <p>In addition to the time and place the UFO was seen, the data also contains the duration of the sighting and a description or account of the sighting. It is these accounts that I find most interesting for today’s project.</p> <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">head</span><span class="p">(</span><span class="n">ufo_sightings</span><span class="o">$</span><span class="n">summary</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## [1] "Saw multi color object above horizon."                                                                     
+## [2] "An object in the shape of a straight line about an inch from our viewing area moving slowly across the sky"
+## [3] "Tone in the air."                                                                                          
+## [4] "Black tic-tac shaped ufo. Moved with insane speed"                                                         
+## [5] "Two alien were scanning me"                                                                                
+## [6] "Long cigar solid shaped craft with light beam"
+</code></pre></div></div> <h2 id="step-1-pre-process-the-text">Step 1: Pre-Process the Text</h2> <p>To analyze the text data contained in the UFO sighting summaries, I will rely on the <a href="https://quanteda.io/" rel="external nofollow noopener" target="_blank">quanteda package</a>, which has a clearly defined workflow: raw text to corpus to tokens to document feature matrix (dfm). Along the way I will remove any punctuation, symbols, numbers, URLs, and separators from the text. I will also make all the text lowercase and remove English stopwords as well as very short words. (Stopwords are words that contain no useful semantic content, i.e. they are meaningless. For example, “the,” “you,” be,” “on,” etc.) I will then stem the words, i.e. each word gets decomposed into its word root. This helps ensure that words like “alien” (singular) and “aliens” (plural) get treated the same way during analysis and visualization. Finally, I will weight the words based on their TF-IDF score (Term Frequency-Inverse Document Frequency). This score essentially penalizes words that are very common across all the UFO sighting accounts so that these very common words don’t “hog” all the space in subsequent analysis and visualization.</p> <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># quanteda workflow</span><span class="w">
+</span><span class="n">ufo_corp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">corpus</span><span class="p">(</span><span class="n">ufo_sightings</span><span class="o">$</span><span class="n">summary</span><span class="p">)</span><span class="w">
+</span><span class="n">ufo_toks</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tokens</span><span class="p">(</span><span class="n">ufo_corp</span><span class="p">,</span><span class="w"> </span><span class="n">remove_punct</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w">
+                   </span><span class="n">remove_symbols</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w">
+                   </span><span class="n">remove_numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w">
+                   </span><span class="n">remove_url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w">
+                   </span><span class="n">remove_separators</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span><span class="n">ufo_dfm</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">dfm</span><span class="p">(</span><span class="n">ufo_toks</span><span class="p">,</span><span class="w"> </span><span class="n">tolower</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span><span class="n">ufo_dfm</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">dfm_remove</span><span class="p">(</span><span class="n">ufo_dfm</span><span class="p">,</span><span class="w"> </span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stopwords</span><span class="p">(</span><span class="s1">'en'</span><span class="p">))</span><span class="w">
+</span><span class="n">ufo_dfm</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">dfm_select</span><span class="p">(</span><span class="n">ufo_dfm</span><span class="p">,</span><span class="w"> </span><span class="n">min_nchar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w">
+</span><span class="n">ufo_dfm</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">dfm_wordstem</span><span class="p">(</span><span class="n">ufo_dfm</span><span class="p">)</span><span class="w">
+</span><span class="n">ufo_tfidf_dfm</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">dfm_tfidf</span><span class="p">(</span><span class="n">ufo_dfm</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div> <h2 id="step-2-visualize-common-words">Step 2: Visualize Common Words</h2> <p>Before proceeding, let’s visualize the most common words in these UFO sighting accounts using a word cloud.</p> <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#topfeatures(ufo_tfidf_dfm, 20)</span><span class="w">
+</span><span class="n">textplot_wordcloud</span><span class="p">(</span><span class="n">ufo_tfidf_dfm</span><span class="p">,</span><span class="w"> </span><span class="n">min_count</span><span class="o">=</span><span class="m">1500</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="o">=</span><span class="n">RColorBrewer</span><span class="o">::</span><span class="n">brewer.pal</span><span class="p">(</span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="s2">"Paired"</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div> <p><img src="/assets/img/2023-06-20-UFO-Sightings_files/figure-html/unnamed-chunk-6-1.png" alt=""></p> <p>One aspect of these texts that immediately catches my eye is the frequency of color descriptors within these accounts. It makes sense, when observing a UFO, that color would be one of the clearest and most available ways to describe what one is seeing. “Red,” “orang,” and “white” appear most frequently within the texts, as evidenced by their large size within the word cloud. As a next step, I’d like to further investigate how colors are used to describe UFO sightings.</p> <h2 id="step-3-identify-most-used-color-terms-within-the-text">Step 3: Identify Most Used Color Terms Within the Text</h2> <p>I’ll spare you the details on this one. I examined the top 500 words in the text using the topfeatures() function and identified any color terms that appeared there. The most used color terms are (in order of frequency): white, orange, red, green, blue, black, yellow, silver, amber, reddish, grey, yellowish, gray.</p> <h2 id="step-4-examine-color-terms-in-context">Step 4: Examine Color Terms in Context</h2> <p>I’d like to know what exactly people are describing as “amber” or “yellowish,” so I need to explore the context around these color terms. I’m especially interest in the word that comes right after the color, since the color likely modifies that word, e.g. “a red light.” To do this I can use quanteda’s kwic() (key word in context) function. In a few cases, such as “yellow” and “yellowish,” I’ll combine the two outputs of the kwic() function since these two colors are more-or-less the same.</p> <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">white_words</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">kwic</span><span class="p">(</span><span class="n">ufo_toks</span><span class="p">,</span><span class="w"> </span><span class="s2">"white"</span><span class="p">,</span><span class="w"> </span><span class="n">window</span><span class="o">=</span><span class="m">1</span><span class="p">)</span><span class="w">
+</span><span class="n">orange_words</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">kwic</span><span class="p">(</span><span class="n">ufo_toks</span><span class="p">,</span><span class="w"> </span><span class="s2">"orange"</span><span class="p">,</span><span class="w"> </span><span class="n">window</span><span class="o">=</span><span class="m">1</span><span class="p">)</span><span class="w">
+</span><span class="n">red_words</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">kwic</span><span class="p">(</span><span class="n">ufo_toks</span><span class="p">,</span><span class="w"> </span><span class="s2">"red"</span><span class="p">,</span><span class="w"> </span><span class="n">window</span><span class="o">=</span><span class="m">1</span><span class="p">)</span><span class="w">
+</span><span class="n">red_words</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rbind</span><span class="p">(</span><span class="n">red_words</span><span class="p">,</span><span class="w"> </span><span class="n">kwic</span><span class="p">(</span><span class="n">ufo_toks</span><span class="p">,</span><span class="w"> </span><span class="s2">"reddish"</span><span class="p">,</span><span class="w"> </span><span class="n">window</span><span class="o">=</span><span class="m">1</span><span class="p">))</span><span class="w">
+</span><span class="n">green_words</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">kwic</span><span class="p">(</span><span class="n">ufo_toks</span><span class="p">,</span><span class="w"> </span><span class="s2">"green"</span><span class="p">,</span><span class="w"> </span><span class="n">window</span><span class="o">=</span><span class="m">1</span><span class="p">)</span><span class="w">
+</span><span class="n">blue_words</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">kwic</span><span class="p">(</span><span class="n">ufo_toks</span><span class="p">,</span><span class="w"> </span><span class="s2">"blue"</span><span class="p">,</span><span class="w"> </span><span class="n">window</span><span class="o">=</span><span class="m">1</span><span class="p">)</span><span class="w">
+</span><span class="n">black_words</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">kwic</span><span class="p">(</span><span class="n">ufo_toks</span><span class="p">,</span><span class="w"> </span><span class="s2">"black"</span><span class="p">,</span><span class="w"> </span><span class="n">window</span><span class="o">=</span><span class="m">1</span><span class="p">)</span><span class="w">
+</span><span class="n">yellow_words</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">kwic</span><span class="p">(</span><span class="n">ufo_toks</span><span class="p">,</span><span class="w"> </span><span class="s2">"yellow"</span><span class="p">,</span><span class="w"> </span><span class="n">window</span><span class="o">=</span><span class="m">1</span><span class="p">)</span><span class="w">
+</span><span class="n">yellow_words</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rbind</span><span class="p">(</span><span class="n">yellow_words</span><span class="p">,</span><span class="w"> </span><span class="n">kwic</span><span class="p">(</span><span class="n">ufo_toks</span><span class="p">,</span><span class="w"> </span><span class="s2">"yellowish"</span><span class="p">,</span><span class="w"> </span><span class="n">window</span><span class="o">=</span><span class="m">1</span><span class="p">))</span><span class="w">
+</span><span class="n">silver_words</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">kwic</span><span class="p">(</span><span class="n">ufo_toks</span><span class="p">,</span><span class="w"> </span><span class="s2">"silver"</span><span class="p">,</span><span class="w"> </span><span class="n">window</span><span class="o">=</span><span class="m">1</span><span class="p">)</span><span class="w">
+</span><span class="n">amber_words</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">kwic</span><span class="p">(</span><span class="n">ufo_toks</span><span class="p">,</span><span class="w"> </span><span class="s2">"amber"</span><span class="p">,</span><span class="w"> </span><span class="n">window</span><span class="o">=</span><span class="m">1</span><span class="p">)</span><span class="w">
+</span><span class="n">gray_words</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">kwic</span><span class="p">(</span><span class="n">ufo_toks</span><span class="p">,</span><span class="w"> </span><span class="s2">"gray"</span><span class="p">,</span><span class="w"> </span><span class="n">window</span><span class="o">=</span><span class="m">1</span><span class="p">)</span><span class="w">
+</span><span class="n">gray_words</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rbind</span><span class="p">(</span><span class="n">gray_words</span><span class="p">,</span><span class="w"> </span><span class="n">kwic</span><span class="p">(</span><span class="n">ufo_toks</span><span class="p">,</span><span class="w"> </span><span class="s2">"grey"</span><span class="p">,</span><span class="w"> </span><span class="n">window</span><span class="o">=</span><span class="m">1</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div> <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">head</span><span class="p">(</span><span class="n">gray_words</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## Keyword-in-context with 6 matches.                                         
+##   [text183, 20]   other | gray | white   
+##    [text683, 1]         | gray | beings  
+##   [text1021, 9]       a | gray | being   
+##   [text1200, 7]  silver | gray | parasail
+##   [text1280, 5] witness | gray | disc    
+##  [text1328, 17]    feet | Gray | top
+</code></pre></div></div> <p>To show a brief example, the kwic() function produces a data frame that identifies which texts contain the word “gray,” as well as one word before and one word after “gray.” I could have added additional words before/after using the window parameter, but in this case I’m really only interested in the one word that comes after the color term. Above I can see that the word “gray” often describes “beings,” i.e. aliens…?</p> <h2 id="step-5-visualize-color-terms-in-context">Step 5: Visualize Color Terms in Context</h2> <p>With the work done so far, it’s quite easy to generate word clouds for each color, so that I can visualize what each color term most frequently describes. I will simply repeat the quanteda workflow from before for each color.</p> <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># create custom function to repeat quanteda workflow</span><span class="w">
+</span><span class="n">prep_text</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="w"> </span><span class="n">my_color</span><span class="o">=</span><span class="kc">NULL</span><span class="p">){</span><span class="w">
+  </span><span class="n">text_corp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">corpus</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">post</span><span class="p">)</span><span class="w">
+  </span><span class="n">text_toks</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tokens</span><span class="p">(</span><span class="n">text_corp</span><span class="p">)</span><span class="w">
+  </span><span class="n">text_dfm</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">dfm</span><span class="p">(</span><span class="n">text_toks</span><span class="p">,</span><span class="w"> </span><span class="n">tolower</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+  </span><span class="n">text_dfm</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">dfm_remove</span><span class="p">(</span><span class="n">text_dfm</span><span class="p">,</span><span class="w"> </span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stopwords</span><span class="p">(</span><span class="s1">'en'</span><span class="p">))</span><span class="w">
+  </span><span class="n">text_dfm</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">dfm_select</span><span class="p">(</span><span class="n">text_dfm</span><span class="p">,</span><span class="w"> </span><span class="n">min_nchar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w">
+  </span><span class="n">text_dfm</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">dfm_wordstem</span><span class="p">(</span><span class="n">text_dfm</span><span class="p">)</span><span class="w">
+  </span><span class="n">text_dfm</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">dfm_tfidf</span><span class="p">(</span><span class="n">text_dfm</span><span class="p">)</span><span class="w">
+  </span><span class="k">if</span><span class="p">(</span><span class="nf">is.null</span><span class="p">(</span><span class="n">my_color</span><span class="p">)){</span><span class="w">
+    </span><span class="n">my_color</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">strsplit</span><span class="p">(</span><span class="n">deparse</span><span class="p">(</span><span class="nf">substitute</span><span class="p">(</span><span class="n">df</span><span class="p">)),</span><span class="s2">"_"</span><span class="p">)[[</span><span class="m">1</span><span class="p">]][</span><span class="m">1</span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+  </span><span class="n">textplot_wordcloud</span><span class="p">(</span><span class="n">text_dfm</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="o">=</span><span class="n">my_color</span><span class="p">,</span><span class="w"> </span><span class="n">min_size</span><span class="o">=</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">max_size</span><span class="o">=</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">min_count</span><span class="o">=</span><span class="m">10</span><span class="p">)</span><span class="w">
+  </span><span class="n">mtext</span><span class="p">(</span><span class="n">paste</span><span class="p">(</span><span class="s2">"Words described as"</span><span class="p">,</span><span class="w"> </span><span class="n">strsplit</span><span class="p">(</span><span class="n">deparse</span><span class="p">(</span><span class="nf">substitute</span><span class="p">(</span><span class="n">df</span><span class="p">)),</span><span class="s2">"_"</span><span class="p">)[[</span><span class="m">1</span><span class="p">]][</span><span class="m">1</span><span class="p">],</span><span class="w"> </span><span class="s2">"in UFO sightings"</span><span class="p">),</span><span class="w"> 
+        </span><span class="n">side</span><span class="o">=</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">line</span><span class="o">=</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">at</span><span class="o">=</span><span class="m">-0.07</span><span class="p">,</span><span class="w"> </span><span class="n">adj</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">cex</span><span class="o">=</span><span class="m">1</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div> <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">prep_text</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">white_words</span><span class="p">,</span><span class="w"> </span><span class="n">my_color</span><span class="o">=</span><span class="s2">"antiquewhite3"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div> <p><img src="/assets/img/2023-06-20-UFO-Sightings_files/figure-html/unnamed-chunk-10-1.png" alt=""></p> <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">prep_text</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">orange_words</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div> <p><img src="/assets/img/2023-06-20-UFO-Sightings_files/figure-html/unnamed-chunk-10-2.png" alt=""></p> <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">prep_text</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">red_words</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div> <p><img src="/assets/img/2023-06-20-UFO-Sightings_files/figure-html/unnamed-chunk-10-3.png" alt=""></p> <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">prep_text</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">green_words</span><span class="p">,</span><span class="w"> </span><span class="n">my_color</span><span class="o">=</span><span class="s2">"green4"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div> <p><img src="/assets/img/2023-06-20-UFO-Sightings_files/figure-html/unnamed-chunk-10-4.png" alt=""></p> <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">prep_text</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">blue_words</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div> <p><img src="/assets/img/2023-06-20-UFO-Sightings_files/figure-html/unnamed-chunk-10-5.png" alt=""></p> <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">prep_text</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">black_words</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div> <p><img src="/assets/img/2023-06-20-UFO-Sightings_files/figure-html/unnamed-chunk-10-6.png" alt=""></p> <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">prep_text</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">yellow_words</span><span class="p">,</span><span class="w"> </span><span class="n">my_color</span><span class="o">=</span><span class="s2">"gold"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div> <p><img src="/assets/img/2023-06-20-UFO-Sightings_files/figure-html/unnamed-chunk-10-7.png" alt=""></p> <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">prep_text</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">silver_words</span><span class="p">,</span><span class="w"> </span><span class="n">my_color</span><span class="o">=</span><span class="s2">"snow4"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div> <p><img src="/assets/img/2023-06-20-UFO-Sightings_files/figure-html/unnamed-chunk-10-8.png" alt=""></p> <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">prep_text</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">amber_words</span><span class="p">,</span><span class="w"> </span><span class="n">my_color</span><span class="o">=</span><span class="s2">"goldenrod"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div> <p><img src="/assets/img/2023-06-20-UFO-Sightings_files/figure-html/unnamed-chunk-10-9.png" alt=""></p> <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">prep_text</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">gray_words</span><span class="p">,</span><span class="w"> </span><span class="n">my_color</span><span class="o">=</span><span class="s2">"gray40"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div> <p><img src="/assets/img/2023-06-20-UFO-Sightings_files/figure-html/unnamed-chunk-10-10.png" alt=""></p> <p>The word clouds show some common trends. For instance, almost all the colors are most frequently used to describe light. The exceptions to this are black, gray, and silver. These colors are more often used to describe objects (esp. disks and spheres), and black, interestingly, is frequently used to describe triangles. After some Googling, I’ve discovered that “black triangle” UFOs appear to be a common enough phenomenon that there is a <a href="https://en.wikipedia.org/wiki/Black_triangle_(UFO)" rel="external nofollow noopener" target="_blank">Wikipedia article</a> dedicated to them.</p> <p><img src="PhoenixLights1997model.jpg" alt="A black triangle UFO (Source: Wikipedia)"></p> <h2 id="conclusion">Conclusion</h2> <p>The colors people use when describing UFO sightings are intriguing. It appears that many UFO sightings involve colored lights, with the occasional gray/silver object or black triangle witnessed.</p> </div> </article> <br> <hr> <br> <h2 class="text-3xl font-semibold mb-4 mt-12">Enjoy Reading This Article?</h2> <p class="mb-2">Here are some more articles you might like to read next:</p> <ul class="list-disc pl-7 my-3 space-y-2 marker:text-[var(--global-theme-color)]"> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2026/Near-Death-Experiences/">Near-Death Experiences</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2025/MTA-Permanent-Art-Catalog/">MTA Permanent Art Catalog</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2025/Funding-for-the-British-Library/">Funding for the British Library</a> </li> </ul> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Irene Morse. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-teaching",
+          title: "teaching",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/teaching/";
+          },
+        },{id: "nav-research",
+          title: "research",
+          description: "A growing collection of your cool projects.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/research/";
+          },
+        },{id: "nav-cv",
+          title: "cv",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "nav-portfolio",
+          title: "portfolio",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/portfolio/index.html";
+          },
+        },{id: "post-near-death-experiences",
+        
+          title: "Near-Death Experiences",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Near-Death-Experiences/";
+          
+        },
+      },{id: "post-ufo-sightings",
+        
+          title: "UFO Sightings",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/UFO-Sightings/";
+          
+        },
+      },{id: "post-mta-permanent-art-catalog",
+        
+          title: "MTA Permanent Art Catalog",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/MTA-Permanent-Art-Catalog/";
+          
+        },
+      },{id: "post-funding-for-the-british-library",
+        
+          title: "Funding for the British Library",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/Funding-for-the-British-Library/";
+          
+        },
+      },{id: "news-a-simple-inline-announcement",
+          title: 'A simple inline announcement.',
+          description: "",
+          section: "News",},{id: "news-a-long-announcement-with-details",
+          title: 'A long announcement with details',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_2/";
+            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
+          title: 'A simple inline announcement with Markdown emoji! <img class="emoji" title=":sparkles:" alt=":sparkles:" src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png" height="20" width="20"> <img class="emoji" title=":smile:" alt=":smile:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png" height="20" width="20">',
+          description: "",
+          section: "News",},{id: "projects-green-card-lottery-survey",
+          title: 'Green Card Lottery Survey',
+          description: "Longitudinal survey of Green Card Lottery participants",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/1_project/";
+            },},{id: "projects-turkish-consulate-voter-survey",
+          title: 'Turkish Consulate Voter Survey',
+          description: "Survey and follow-up interviews with Turkish expat voters",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/2_project/";
+            },},{id: "projects-opposition-response-to-term-limit-subversion-and-democratic-backsliding-evidence-from-côte-d-39-ivoire",
+          title: 'Opposition Response to Term Limit Subversion and Democratic Backsliding - Evidence from Côte...',
+          description: "Co-authored with Dr. Justine Davis",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/3_project/";
+            },},{id: "projects-get-out-the-vote-with-violence-online-mobilization-in-violent-elections",
+          title: 'Get Out the Vote with Violence - Online Mobilization in Violent Elections',
+          description: "Co-authored with Dr. Justine Davis",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/4_project/";
+            },},{id: "teachings-quantitative-empirical-methods-of-political-science",
+          title: 'Quantitative Empirical Methods of Political Science',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/f-2019-ps300/";
+            },},{id: "teachings-introduction-to-comparative-politics",
+          title: 'Introduction to Comparative Politics',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/f-2020-ps140/";
+            },},{id: "teachings-introduction-to-public-health-policy",
+          title: 'Introduction to Public Health Policy',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/f-2021-hmp615/";
+            },},{id: "teachings-the-arab-israeli-conflict",
+          title: 'The Arab-Israeli Conflict',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/f-2022-ps353/";
+            },},{id: "teachings-quantitative-empirical-methods-of-political-science",
+          title: 'Quantitative Empirical Methods of Political Science',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/f-2023-ps300/";
+            },},{id: "teachings-the-arab-israeli-conflict",
+          title: 'The Arab-Israeli Conflict',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/f-2024-ps353/";
+            },},{id: "teachings-the-use-of-social-science-computer-programs",
+          title: 'The Use of Social Science Computer Programs',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/f-2025-ps514/";
+            },},{id: "teachings-data-visualization",
+          title: 'Data Visualization',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/icpsr-2023-dataviz/";
+            },},{id: "teachings-data-science-and-text-analysis",
+          title: 'Data Science and Text Analysis',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/icpsr-2024-text/";
+            },},{id: "teachings-introduction-to-computing-for-data-analysis",
+          title: 'Introduction to Computing for Data Analysis',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/icpsr-2025-computing/";
+            },},{id: "teachings-introduction-to-the-latex-text-processing-system",
+          title: 'Introduction to the LaTeX Text Processing System',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/icpsr-2025-latex/";
+            },},{id: "teachings-data-science-and-text-analysis",
+          title: 'Data Science and Text Analysis',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/icpsr-2025-text/";
+            },},{id: "teachings-introduction-to-computing-for-data-analysis",
+          title: 'Introduction to Computing for Data Analysis',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/icpsr-2026-computing/";
+            },},{id: "teachings-introduction-to-the-latex-text-processing-system",
+          title: 'Introduction to the LaTeX Text Processing System',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/icpsr-2026-latex/";
+            },},{id: "teachings-data-science-and-text-analysis",
+          title: 'Data Science and Text Analysis',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/icpsr-2026-text/";
+            },},{id: "teachings-quantitative-empirical-methods-of-political-science",
+          title: 'Quantitative Empirical Methods of Political Science',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/sp-2025-ps300/";
+            },},{id: "teachings-text-as-data",
+          title: 'Text As Data',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/sp-2026-dacss758/";
+            },},{id: "teachings-quantitative-empirical-methods-of-political-science",
+          title: 'Quantitative Empirical Methods of Political Science',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/sp-2026-ps300/";
+            },},{id: "teachings-introduction-to-comparative-politics",
+          title: 'Introduction to Comparative Politics',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/w-2020-ps140/";
+            },},{id: "teachings-introduction-to-world-politics",
+          title: 'Introduction to World Politics',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/w-2021-ps160/";
+            },},{id: "teachings-public-health-systems-policy-and-management",
+          title: 'Public Health Systems, Policy and Management',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/w-2022-pubhlth513/";
+            },},{id: "teachings-the-use-of-social-science-computer-programs",
+          title: 'The Use of Social Science Computer Programs',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/w-2026-ps514/";
+            },},{
+        id: 'social-cv',
+        title: 'CV',
+        section: 'Socials',
+        handler: () => {
+          window.open("/assets/pdf/Irene_Morse_CV_public.pdf", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/irenemorse", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/irene-morse-3a899890", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>
