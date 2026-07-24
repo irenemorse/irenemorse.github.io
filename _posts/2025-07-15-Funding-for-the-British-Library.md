@@ -12,7 +12,7 @@ output:
 tags: tidytuesday
 description: 
 categories: tidytuesday
-thumbnail: /assets/img/2025-07-15-Funding-for-the-British-Library_files/figure-html/unnamed-chunk-3-1.png"
+thumbnail: /assets/img/2025-07-15-Funding-for-the-British-Library_files/figure-html/unnamed-chunk-3-1.png
 ---
 
 
