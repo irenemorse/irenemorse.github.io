@@ -4,7 +4,7 @@ layout: post
 title: "UFO Sightings"
 subtitle: "Tidy Tuesday for June 20th, 2023"
 author: "Irene Morse"
-date: "2025-07-28"
+date: "2023-06-20"
 output: 
   html_document:
     keep_md: true
@@ -227,7 +227,7 @@ prep_text(df=gray_words, my_color="gray40")
 
 The word clouds show some common trends. For instance, almost all the colors are most frequently used to describe light. The exceptions to this are black, gray, and silver. These colors are more often used to describe objects (esp. disks and spheres), and black, interestingly, is frequently used to describe triangles. After some Googling, I've discovered that "black triangle" UFOs appear to be a common enough phenomenon that there is a [Wikipedia article](https://en.wikipedia.org/wiki/Black_triangle_(UFO)) dedicated to them.
 
-![A black triangle UFO (Source: Wikipedia)](PhoenixLights1997model.jpg)
+![A black triangle UFO (Source: Wikipedia)](/assets/img/2023-06-20-UFO-Sightings_files/figure-html/PhoenixLights1997model.jpg)
 
 ## Conclusion
 
