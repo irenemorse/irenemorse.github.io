@@ -5,7 +5,7 @@ date: 2025-07-22
 tags: tidytuesday
 description: 
 categories: tidytuesday
-thumbnail: assets/img/genderbydecade.png
+thumbnail: /assets/img/2025_07_22_MTA_Permanent_Art_Catalog_files/2025_07_22_MTA_Permanent_Art_Catalog_27_0.png
 ---
 
 # Tidy Tuesday for July 22nd, 2025
@@ -36,7 +36,7 @@ mta_art.head()
 
 
 
-  <div id="df-e5fc375e-d9df-4f4f-be47-07a5e92e2e80" class="colab-df-container">
+  <div id="df-722746b1-c747-4e14-a013-1e74fb52eeb3" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -133,7 +133,7 @@ mta_art.head()
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-e5fc375e-d9df-4f4f-be47-07a5e92e2e80')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-722746b1-c747-4e14-a013-1e74fb52eeb3')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -185,12 +185,12 @@ mta_art.head()
 
     <script>
       const buttonEl =
-        document.querySelector('#df-e5fc375e-d9df-4f4f-be47-07a5e92e2e80 button.colab-df-convert');
+        document.querySelector('#df-722746b1-c747-4e14-a013-1e74fb52eeb3 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-e5fc375e-d9df-4f4f-be47-07a5e92e2e80');
+        const element = document.querySelector('#df-722746b1-c747-4e14-a013-1e74fb52eeb3');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -225,7 +225,7 @@ station_lines.head()
 
 
 
-  <div id="df-edb5a1da-924d-4f9e-80f9-0326fbd4d797" class="colab-df-container">
+  <div id="df-9387eb78-011b-4dd6-ae0c-46c14a6f5b3e" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -286,7 +286,7 @@ station_lines.head()
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-edb5a1da-924d-4f9e-80f9-0326fbd4d797')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-9387eb78-011b-4dd6-ae0c-46c14a6f5b3e')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -338,12 +338,12 @@ station_lines.head()
 
     <script>
       const buttonEl =
-        document.querySelector('#df-edb5a1da-924d-4f9e-80f9-0326fbd4d797 button.colab-df-convert');
+        document.querySelector('#df-9387eb78-011b-4dd6-ae0c-46c14a6f5b3e button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-edb5a1da-924d-4f9e-80f9-0326fbd4d797');
+        const element = document.querySelector('#df-9387eb78-011b-4dd6-ae0c-46c14a6f5b3e');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -377,7 +377,7 @@ Looking through this very interesting data, I'm intrigued by the idea of gender 
 
 
 ```python
-#!pip install gender-guesser
+!pip install gender-guesser
 import gender_guesser.detector as gg
 ```
 
@@ -385,7 +385,7 @@ import gender_guesser.detector as gg
       Downloading gender_guesser-0.4.0-py2.py3-none-any.whl.metadata (3.0 kB)
     Downloading gender_guesser-0.4.0-py2.py3-none-any.whl (379 kB)
     [?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/379.3 kB[0m [31m?[0m eta [36m-:--:--[0m
-[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m379.3/379.3 kB[0m [31m23.1 MB/s[0m eta [36m0:00:00[0m
+[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m379.3/379.3 kB[0m [31m20.2 MB/s[0m eta [36m0:00:00[0m
     [?25hInstalling collected packages: gender-guesser
     Successfully installed gender-guesser-0.4.0
 
@@ -408,7 +408,7 @@ mta_art[['artist','gender']].head(20)
 
 
 
-  <div id="df-462935a5-b0a4-4bbf-9bb2-ec3f10e6dc9a" class="colab-df-container">
+  <div id="df-5f4d2563-92ee-4317-a8b2-d6fe767db83b" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -538,7 +538,7 @@ mta_art[['artist','gender']].head(20)
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-462935a5-b0a4-4bbf-9bb2-ec3f10e6dc9a')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-5f4d2563-92ee-4317-a8b2-d6fe767db83b')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -590,12 +590,12 @@ mta_art[['artist','gender']].head(20)
 
     <script>
       const buttonEl =
-        document.querySelector('#df-462935a5-b0a4-4bbf-9bb2-ec3f10e6dc9a button.colab-df-convert');
+        document.querySelector('#df-5f4d2563-92ee-4317-a8b2-d6fe767db83b button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-462935a5-b0a4-4bbf-9bb2-ec3f10e6dc9a');
+        const element = document.querySelector('#df-5f4d2563-92ee-4317-a8b2-d6fe767db83b');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -706,7 +706,7 @@ gender_by_year.head(9)
 
 
 
-  <div id="df-d005204c-437f-4f02-a148-271447cd2dbd" class="colab-df-container">
+  <div id="df-1b38f076-cb8b-44c6-96a1-9c5203b54f3d" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -791,7 +791,7 @@ gender_by_year.head(9)
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-d005204c-437f-4f02-a148-271447cd2dbd')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-1b38f076-cb8b-44c6-96a1-9c5203b54f3d')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -843,12 +843,12 @@ gender_by_year.head(9)
 
     <script>
       const buttonEl =
-        document.querySelector('#df-d005204c-437f-4f02-a148-271447cd2dbd button.colab-df-convert');
+        document.querySelector('#df-1b38f076-cb8b-44c6-96a1-9c5203b54f3d button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-d005204c-437f-4f02-a148-271447cd2dbd');
+        const element = document.querySelector('#df-1b38f076-cb8b-44c6-96a1-9c5203b54f3d');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -906,7 +906,7 @@ plt.title("MTA Artists' Gender Distribution Over Time")
 
 
     
-![png](2025_07_22_MTA_Permanent_Art_Catalog_files/2025_07_22_MTA_Permanent_Art_Catalog_22_1.png)
+![png](/assets/img/2025_07_22_MTA_Permanent_Art_Catalog_files/2025_07_22_MTA_Permanent_Art_Catalog_22_1.png)
     
 
 
@@ -922,7 +922,7 @@ mta_art.loc[(mta_art['art_date']>=2010) & (mta_art['art_date']<2020), 'art_decad
 mta_art.loc[(mta_art['art_date']>=2020) & (mta_art['art_date']<2030), 'art_decade'] = "2020s"
 ```
 
-    /tmp/ipykernel_3049/950652811.py:2: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value '1980s' has dtype incompatible with float64, please explicitly cast to a compatible dtype first.
+    /tmp/ipykernel_1229/950652811.py:2: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value '1980s' has dtype incompatible with float64, please explicitly cast to a compatible dtype first.
       mta_art.loc[(mta_art['art_date']>=1980) & (mta_art['art_date']<1990), 'art_decade'] = "1980s"
 
 
@@ -961,7 +961,7 @@ plt.show()
 
 
     
-![png](2025_07_22_MTA_Permanent_Art_Catalog_files/2025_07_22_MTA_Permanent_Art_Catalog_27_0.png)
+![png](/assets/img/2025_07_22_MTA_Permanent_Art_Catalog_files/2025_07_22_MTA_Permanent_Art_Catalog_27_0.png)
     
 
 
@@ -990,7 +990,7 @@ station_totals.head(20)
 
 
 
-  <div id="df-b67bd7ce-eb76-47a6-819b-4e8babef2475" class="colab-df-container">
+  <div id="df-fa0029b3-a3c1-4109-b8ce-69b7902f7d4a" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1120,7 +1120,7 @@ station_totals.head(20)
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-b67bd7ce-eb76-47a6-819b-4e8babef2475')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-fa0029b3-a3c1-4109-b8ce-69b7902f7d4a')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -1172,12 +1172,12 @@ station_totals.head(20)
 
     <script>
       const buttonEl =
-        document.querySelector('#df-b67bd7ce-eb76-47a6-819b-4e8babef2475 button.colab-df-convert');
+        document.querySelector('#df-fa0029b3-a3c1-4109-b8ce-69b7902f7d4a button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-b67bd7ce-eb76-47a6-819b-4e8babef2475');
+        const element = document.querySelector('#df-fa0029b3-a3c1-4109-b8ce-69b7902f7d4a');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1247,7 +1247,7 @@ plt.show()
 
 
     
-![png](2025_07_22_MTA_Permanent_Art_Catalog_files/2025_07_22_MTA_Permanent_Art_Catalog_36_0.png)
+![png](/assets/img/2025_07_22_MTA_Permanent_Art_Catalog_files/2025_07_22_MTA_Permanent_Art_Catalog_36_0.png)
     
 
 
