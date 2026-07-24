@@ -5,7 +5,7 @@ date: 2026-07-21
 tags: tidytuesday
 description: 
 categories: tidytuesday
-thumbnail: assets/img/2026_07_21_Near_Death_Experiences_files/2026_07_21_Near_Death_Experiences_41_0.png
+thumbnail: /assets/img/2026_07_21_Near_Death_Experiences_files/2026_07_21_Near_Death_Experiences_41_0.png
 ---
 
 # Tidy Tuesday for July 21st, 2026
@@ -865,7 +865,7 @@ plt.show()
 
 
     
-![png](assets/img/2026_07_21_Near_Death_Experiences_files/2026_07_21_Near_Death_Experiences_24_0.png)
+![png](/assets/img/2026_07_21_Near_Death_Experiences_files/2026_07_21_Near_Death_Experiences_24_0.png)
     
 
 
@@ -1507,7 +1507,7 @@ plt.show()
 
 
     
-![png](assets/img/2026_07_21_Near_Death_Experiences_files/2026_07_21_Near_Death_Experiences_41_0.png)
+![png](/assets/img/2026_07_21_Near_Death_Experiences_files/2026_07_21_Near_Death_Experiences_41_0.png)
     
 
 
@@ -1741,7 +1741,7 @@ plt.show()
 
 
     
-![png](assets/img/2026_07_21_Near_Death_Experiences_files/2026_07_21_Near_Death_Experiences_51_0.png)
+![png](/assets/img/2026_07_21_Near_Death_Experiences_files/2026_07_21_Near_Death_Experiences_51_0.png)
     
 
 
@@ -1798,7 +1798,7 @@ plt.show()
 
 
     
-![png](assets/img/2026_07_21_Near_Death_Experiences_files/2026_07_21_Near_Death_Experiences_56_0.png)
+![png](/assets/img/2026_07_21_Near_Death_Experiences_files/2026_07_21_Near_Death_Experiences_56_0.png)
     
 
 
