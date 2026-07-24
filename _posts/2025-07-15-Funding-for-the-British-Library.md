@@ -12,7 +12,7 @@ output:
 tags: tidytuesday
 description: 
 categories: tidytuesday
-thumbnail: assets/img/libraryfunding.png
+thumbnail: /assets/img/2025-07-15-Funding-for-the-British-Library_files/figure-html/unnamed-chunk-3-1.png"
 ---
 
 
@@ -50,7 +50,7 @@ ggplot(bl_funding, aes(x=year))+
   ggtitle("Changes in British Library Funding from 1998 to 2023")
 ```
 
-![](2025-07-15-Funding-for-the-British-Library_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
+![](/assets/img/2025-07-15-Funding-for-the-British-Library_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
 
 The plot of funding over time provides a few key insights into this topic. First, it is immediately clear that the largest source of funding for the British Library is Grants In Aid (GIA), which is the official term for the core funding from the UK government. Second, fluctuations in total funding for the library appear to closely mirror fluctuations in GIA. In other words, changes in funding for the library can most likely be explained by changes in GIA.
 
@@ -105,7 +105,7 @@ ggplot(bl_funding, aes(x=year))+
   ggtitle("Changes in British Library Funding Overlaid on Ruling Party")
 ```
 
-![](2025-07-15-Funding-for-the-British-Library_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
+![](/assets/img/2025-07-15-Funding-for-the-British-Library_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
 
 Under Labour rule in the early 2000s, we see a period of increasing funding for the British Library. This changes pretty notably when the Conservative party takes power in 2010. However, the Conservative record on funding is a bit more ambiguous. Though there are initial decreases in funding, around 2018 there is a new period of increasing funding.
 
@@ -161,7 +161,7 @@ ggplot(bl_funding, aes(x=year))+
   ggtitle("Economic Health and British Library Funding Compared")
 ```
 
-![](2025-07-15-Funding-for-the-British-Library_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
+![](/assets/img/2025-07-15-Funding-for-the-British-Library_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
 Though the visualization is quite noisy, there does appear to be some alignment between British Library funding and two of the three economic indicators: GDP and unemployment. I have removed inflation from the plot because it showed little to no correlation with the other variables and skewed the plot significantly.
 
