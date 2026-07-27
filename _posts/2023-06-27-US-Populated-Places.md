@@ -1,11 +1,18 @@
 ---
-title: "Tidy Tuesday for June 27th, 2023"
-subtitle: "US Populated Places"
+layout: post
+
+title: "US Populated Places"
+subtitle: "Tidy Tuesday for June 27th, 2023"
 author: "Irene Morse"
 date: "2023-06-27"
 output: 
   html_document:
     keep_md: true
+
+tags: tidytuesday
+description: 
+categories: tidytuesday
+thumbnail: /assets/img/2023-06-20-UFO-Sightings_files/figure-html/unnamed-chunk-6-1.png
 ---
 
 
