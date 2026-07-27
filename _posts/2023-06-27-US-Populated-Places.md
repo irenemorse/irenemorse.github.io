@@ -16,6 +16,9 @@ categories: tidytuesday
 thumbnail: /assets/img/2023-06-20-UFO-Sightings_files/figure-html/unnamed-chunk-6-1.png
 ---
 
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/htmlwidgets@1.6.4/dist/htmlwidgets.js"></script>
+
 
 
 ## Setup and Introduction
