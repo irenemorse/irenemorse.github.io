@@ -1,4 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"> <html><body> <h2 id="setup-and-introduction">Setup and Introduction</h2> <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">tidytuesdayR</span><span class="p">)</span><span class="w">
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> US Populated Places | Irene Morse </title> <meta name="author" content="Irene Morse"> <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. "> <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="/assets/img/favicon.png?v=14ab04b9acba7a59dafa345c61d5bae9"> <link rel="stylesheet" href="/assets/css/main.css?v=f0b101217084a90093badfe99ff9a7d1"> <link rel="canonical" href="https://irenemorse.github.io/blog/2023/US-Populated-Places/"> <script src="/assets/js/theme.js?v=7af685e2ba20b37fef545c97b8064050"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Irene</span> Morse </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/teaching/">teaching </a> </li> <li class="nav-item "> <a class="nav-link" href="/research/">research </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">cv </a> </li> <li class="nav-item "> <a class="nav-link" href="/portfolio/index.html">portfolio </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">US Populated Places</h1> <p class="post-meta"> Created on June 27, 2023 by Irene Morse </p> <p class="post-tags"> <a href="/blog/2023"> <i class="fa-solid fa-calendar fa-sm"></i> 2023 </a>   ·   <a href="/blog/tag/tidytuesday"> <i class="fa-solid fa-hashtag fa-sm"></i> tidytuesday</a>   ·   <a href="/blog/category/tidytuesday"> <i class="fa-solid fa-tag fa-sm"></i> tidytuesday</a> </p> </header> <article class="post-content"> <div id="markdown-content"> <h2 id="setup-and-introduction">Setup and Introduction</h2> <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">tidytuesdayR</span><span class="p">)</span><span class="w">
 </span><span class="n">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span><span class="w">
 </span><span class="n">library</span><span class="p">(</span><span class="n">ggthemes</span><span class="p">)</span><span class="w">
 </span><span class="n">library</span><span class="p">(</span><span class="n">tidygeocoder</span><span class="p">)</span><span class="w">
@@ -295,4 +301,295 @@
 </span><span class="n">fig2</span><span class="w">
 </span></code></pre></div></div> <pre><code class="language-{=html}">&lt;div class="plotly html-widget html-fill-item" id="htmlwidget-87c910d1e84dcd9eff79" style="width:672px;height:480px;"&gt;&lt;/div&gt;
 &lt;script type="application/json" data-for="htmlwidget-87c910d1e84dcd9eff79"&gt;{"x":{"visdat":{"514c66936b7f":["function () ","plotlyVisDat"]},"cur_data":"514c66936b7f","attrs":{"514c66936b7f":{"lat":{},"lon":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":{},"y":{},"type":"scatter","mode":"markers","text":{},"color":{},"symbol":["square"],"size":[20],"hoverinfo":"text","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"mapType":"geo","title":"Named by...whom?&lt;br /&gt;(Hover for full history)","geo":{"domain":{"x":[0,1],"y":[0,1]},"scope":"usa","projection":{"type":"albers usa"},"showland":true,"landcolor":"rgba(253,246,227,1)","subunitcolor":"rgba(253,246,227,1)","countrycolor":"rgba(253,246,227,1)","countrywidth":0.5,"subunitwidth":0.5},"font":{"family":"Courier","size":10,"color":"#523e09","face":"bold"},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"lat":[31.829597199999998,46.5954452,43.749049999999997,41.5575349,40.434489499999998,44.570352200000002,38.266967800000003,38.432238900000002,44.958296199999999,43.881087299999997,45.049688000000003],"lon":[-86.617751699999999,-116.8012667,-116.96182,-89.460927600000005,-84.977745499999997,-68.735864199999995,-94.495786699999996,-94.347448700000001,-97.581472000000005,-97.504512099999999,-98.095646400000007],"type":"scattergeo","mode":"markers","text":["Became the county seat of Butler&lt;br&gt;County in 1822. Named by early&lt;br&gt;settlers from the town in South&lt;br&gt;Carolina.","A small pioneer community near Genesee.&lt;br&gt;Said locally to have been named&lt;br&gt;by a settler.","Named by and for an early&lt;br&gt;settler, a school teacher, who dreamed&lt;br&gt;of founding a town in that&lt;br&gt;spot. Founded in 1889.","Named by settlers from.the State of&lt;br&gt;Ohio.","Settled in 1837. Named by early&lt;br&gt;settlers from Portland, Maine.","Said to have been so named&lt;br&gt;by the first settler because of&lt;br&gt;the finding of an oar upon&lt;br&gt;the shore.","Laid out in 1871, and named&lt;br&gt;by the early settlers from Virginia,&lt;br&gt;for their home state.  (MO-T101)","Union Town (later Crescent Hill) -&lt;br&gt;The first name of a town&lt;br&gt;near central Deer Creek Township; surveyed&lt;br&gt;in Feb. 1858.  Named by&lt;br&gt;settlers from Pennsylvania for Uniontown, PA.&lt;br&gt; Cresent Hill - This name,&lt;br&gt;which replaced the name Union Town,&lt;br&gt;was given in 1862 to the&lt;br&gt;community from the round hill on&lt;br&gt;which it was situated.  This&lt;br&gt;community was missed by the Missouri&lt;br&gt;Pacific Railroad and is no longer&lt;br&gt;in existence.  (MO-T101)","Settled in 1889 and named by&lt;br&gt;early settlers Mr and Mrs P&lt;br&gt;S Carpenter for its  picturesque&lt;br&gt;beauty.  (SD-T17/p65)","Founded in 1883 and named by&lt;br&gt;settlers for Italian Sculptor Antonio Canova&lt;br&gt;(1857-1822).(SD-T17/p53) Incorporated in 1898.","Named by an early settler from&lt;br&gt;Turton in Lancashire, England. It was&lt;br&gt;platted in 1886. (SD-T83/p. 132) Incorporated&lt;br&gt;in 1905."],"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text"],"name":"settlers","marker":{"color":"rgba(102,194,165,1)","size":[20,20,20,20,20,20,20,20,20,20,20],"sizemode":"area","symbol":"square","line":{"color":"rgba(102,194,165,1)"}},"textfont":{"color":"rgba(102,194,165,1)","size":20},"line":{"color":"rgba(102,194,165,1)","width":20},"geo":"geo","frame":null},{"lat":[32.879502199999997,37.536132899999998,38.643063699999999,33.882058700000002,45.738006900000002,43.4741517,45.1555313,43.903601999999999,46.922920099999999,46.868481699999997],"lon":[-111.75735210000001,-96.641965400000004,-96.257219500000005,-89.829531599999996,-97.9212165,-97.985627699999995,-98.579262900000003,-99.861783399999993,-118.75471810000001,-118.3241383],"type":"scattergeo","mode":"markers","text":["So named by the railroad as&lt;br&gt;it was the nearest stop, at&lt;br&gt;that time, to the Casa Grande&lt;br&gt;Ruins (AZ-T101).","Named by Missouri Pacific RR in&lt;br&gt;the 1880s for Arlie Latham, member&lt;br&gt;of the St. Louis Browns baseball&lt;br&gt;team (US-T131/1994/Invention &amp; Technology Mag/p21) Platted&lt;br&gt;in 1885.","Named by Missouri Pacific RR in&lt;br&gt;the 1880s for Dock Bushong, catcher&lt;br&gt;for the St. Louis Browns baseball&lt;br&gt;team (US-T131/1994/Invention &amp; Technology Mag/p21) Founded&lt;br&gt;in 1886 and incorporated in 1927.","Named by the railroad company for&lt;br&gt;Richard Hardy, the owner of the&lt;br&gt;land upon which the depot was&lt;br&gt;built.","Named by the Great Northern Railway&lt;br&gt;Company, likely for Amherst, Massachusetts. (SD-T17/p46)","The town was named by Milwaukee&lt;br&gt;Railroad officials for the man who&lt;br&gt;surveyed the town site in 1885.&lt;br&gt; The town was platted in&lt;br&gt;1910.  (SD-T17/p59)","Named by the railroad company from&lt;br&gt;the fact that the station was&lt;br&gt;the most northerly station on the&lt;br&gt;railroad. (SD-T83/p. 108) Platted in 1881&lt;br&gt;and incorporated in 1909.","Founded in 1905 and named by&lt;br&gt;officials of the Milwaukee Railroad.(SD-T17/p73-4) Incorporated&lt;br&gt;in 1909. Became the county seat&lt;br&gt;of Lyman County in 1922.","When the Milwaukee Railway was built&lt;br&gt;through the area, the station was&lt;br&gt;named by its officials for the&lt;br&gt;Kingdom of Servia, later part of&lt;br&gt;Yugoslavia (Place Names of WA/p269).","Named by railroad officials in 1889&lt;br&gt;for James F. Fletcher, who owned&lt;br&gt;the land on which the station&lt;br&gt;was built."],"hoverinfo":["text","text","text","text","text","text","text","text","text","text"],"name":"railroad","marker":{"color":"rgba(228,156,113,1)","size":[20,20,20,20,20,20,20,20,20,20],"sizemode":"area","symbol":"square","line":{"color":"rgba(228,156,113,1)"}},"textfont":{"color":"rgba(228,156,113,1)","size":20},"line":{"color":"rgba(228,156,113,1)","width":20},"geo":"geo","frame":null},{"lat":[41.423342599999998,41.342790299999997,44.284134799999997,43.027496999999997,46.9753708,47.290096599999998,45.643728699999997],"lon":[-99.126204000000001,-97.238372699999999,-96.685606000000007,-98.888422800000001,-123.81572180000001,-122.66763109999999,-122.3720367],"type":"scattergeo","mode":"markers","text":["Established in 1885 and named by&lt;br&gt;Mrs Samuel A Hawthorne who served&lt;br&gt;as the first Postmistress for the&lt;br&gt;community.  This community was originally&lt;br&gt;named Brownville in honor of Porter&lt;br&gt;Brown, an original settler.  Another&lt;br&gt;town named Brownville already existed in&lt;br&gt;the State, therefore the name was&lt;br&gt;changed to Arcadia, which reportedly means&lt;br&gt;\"the feast of flowers\", likely referring&lt;br&gt;to the many flowers in bloom.&lt;br&gt; (NE-T18)","Named by Mrs Mary B Finch,&lt;br&gt;for Jessee D Bell, founder of&lt;br&gt;the community. Mr Bell donated the&lt;br&gt;land for the town and contributed&lt;br&gt;to the vast amount of shrubry,&lt;br&gt;plants and unique trees in the&lt;br&gt;town. (NE-T18/p29) Platted in 1890.","Named by Mrs. W.R. Stowe of&lt;br&gt;Brookings, SD from Aurora, IL, her&lt;br&gt;old home, which was named from&lt;br&gt;Aurora, NY, from Latin word meaning&lt;br&gt;\"morning,\" \"dawn,\" \"east.\" (SD-T83/p. 40)","Named by Mrs Isabella B Turney&lt;br&gt;of the Turney family who owned&lt;br&gt;much land in the vicinity from&lt;br&gt;Fairfax Court House, VA. (SD-T83/ p.&lt;br&gt;70) This community was settled after&lt;br&gt;the opening of the Indian Territory.&lt;br&gt;(SD-T17/p62) Founded in 1890.","Named by Mrs. James Stewart for&lt;br&gt;her home town of Aberdeen, Scotland.&lt;br&gt;See \"Derivation of Washington State Town&lt;br&gt;Names\", DeWitt C. Francis, 1971. Founded&lt;br&gt;in 1867.","Named by Mrs. G.W. Powell in&lt;br&gt;1893; part of the name is&lt;br&gt;from her eldest daughter, Arla, and&lt;br&gt;part is from a city in&lt;br&gt;Malta, Veletta. See \"Description of Washington&lt;br&gt;State Town Names\", DeWitt C. Francis,&lt;br&gt;1971","Named by Mrs. Blackwood, early homesteader.&lt;br&gt; 14mi east of Vancouver, north&lt;br&gt;of Little Washougal River."],"hoverinfo":["text","text","text","text","text","text","text"],"name":"mrs.","marker":{"color":"rgba(201,152,157,1)","size":[20,20,20,20,20,20,20],"sizemode":"area","symbol":"square","line":{"color":"rgba(201,152,157,1)"}},"textfont":{"color":"rgba(201,152,157,1)","size":20},"line":{"color":"rgba(201,152,157,1)","width":20},"geo":"geo","frame":null},{"lat":[33.533382000000003,38.172804499999998,36.955606400000001,46.632712400000003,41.039164999999997,40.485071699999999],"lon":[-111.30623869999999,-94.182168899999994,-89.868144099999995,-112.3219605,-96.368346000000003,-78.724742699999993],"type":"scattergeo","mode":"markers","text":["Named by Mr. Jack Frasier, the&lt;br&gt;original settler and stationmaster (US-T121).","Settled about 1840, laid out by&lt;br&gt;Joseph Smith and named by him&lt;br&gt;for its pleasant location in a&lt;br&gt;gap between hills covered with timber.&lt;br&gt; (MO-T101)","Named by Mr. Crumb, who built&lt;br&gt;the railroad in Stoddard Co. in&lt;br&gt;1910.  He named the station&lt;br&gt;his line had reached Zeta, becausehe&lt;br&gt;was interested in learning how to&lt;br&gt;make the sixth letter of the&lt;br&gt;Greek alphabet. (MO Place Names/p96)","Blossburg was the name of a&lt;br&gt;station along the Northern Pacific Railroad&lt;br&gt;and was named by a Mr.&lt;br&gt;Wicks, a mining engineer, after a&lt;br&gt;Pennsylvania coal mining town spelled Blosburg.&lt;br&gt; This community was formerly called&lt;br&gt;Mullan, named for Captain John Mullan&lt;br&gt;who was a member of the&lt;br&gt;Stevens Survey of 1853.  That&lt;br&gt;Survey explored Montana in search of&lt;br&gt;routes for a transcontinental railroad. &lt;br&gt;The name was later changed to&lt;br&gt;Blossburg because mail shipments kept being&lt;br&gt;inadvertently sent to Mullan, Idaho.","Founded on 4 March 1870 and&lt;br&gt;named by a Mr Argyle for&lt;br&gt;Ashland, Kentucky, home of Henry Clay,&lt;br&gt;his favorite politician.  (NE-T18/p126)","laid out by the Reverend Rees&lt;br&gt;Lloyd, and named by him for&lt;br&gt;his eldest son, Eben"],"hoverinfo":["text","text","text","text","text","text"],"name":"mr.","marker":{"color":"rgba(175,154,200,1)","size":[20,20,20,20,20,20],"sizemode":"area","symbol":"square","line":{"color":"rgba(175,154,200,1)"}},"textfont":{"color":"rgba(175,154,200,1)","size":20},"line":{"color":"rgba(175,154,200,1)","width":20},"geo":"geo","frame":null},{"lat":[43.824916299999998,46.599340099999999,40.871943799999997,42.202500999999998,45.181346699999999,48.980948499999997],"lon":[-111.1796679,-116.5437617,-96.387510000000006,-99.604285899999994,-97.683421999999993,-122.5248874],"type":"scattergeo","mode":"markers","text":["Post office 1890-1913. Townsite dedicated in&lt;br&gt;1905. Most establishments moved to Tetonia&lt;br&gt;when Union Pacific RR came through.&lt;br&gt;Named by US Postal Service to&lt;br&gt;honor federal geologist and surveyor F.&lt;br&gt;V. Hayden.","Said locally to have been named&lt;br&gt;by first postmaster Roger Drury for&lt;br&gt;Chief Justice Roger Brooke Taney, US&lt;br&gt;Supreme Court 1836-64, whom he admired.","Named by the Post Office Department&lt;br&gt;in Washington, DC.  Name origin&lt;br&gt;unknown.  (NE-T18/p30)","Named by the US Post Office&lt;br&gt;Department. (MO-T109/p121)","Founded in 1887 and named by&lt;br&gt;Ross E Parks, the first Postmaster&lt;br&gt;for the village, for his sister,&lt;br&gt;Lily.  (SD-T17/p76)","Named by James Bremmer of the&lt;br&gt;U.S. Postal Service."],"hoverinfo":["text","text","text","text","text","text"],"name":"postal service","marker":{"color":"rgba(226,148,184,1)","size":[20,20,20,20,20,20],"sizemode":"area","symbol":"square","line":{"color":"rgba(226,148,184,1)"}},"textfont":{"color":"rgba(226,148,184,1)","size":20},"line":{"color":"rgba(226,148,184,1)","width":20},"geo":"geo","frame":null},{"lat":[33.183393299999999,38.097223800000002,39.513775199999998,46.592712200000001,64.154166700000005],"lon":[-110.99761410000001,-105.33611000000001,-121.556359,-112.036109,-141.45972219999999],"type":"scattergeo","mode":"markers","text":["Named by a miner named Bullinger&lt;br&gt;for his sister when he opened&lt;br&gt;the Ray Mine and started the&lt;br&gt;Ray Copper Company in 1882 (AZ-T101).","Said to have been so named&lt;br&gt;by the early miners because of&lt;br&gt;the thickets of wild roses which&lt;br&gt;surrounded the springs in the vicinity.","Became the county seat of Butte&lt;br&gt;County in 1856. Incorporated in 1906.&lt;br&gt;Named by the early miners because&lt;br&gt;of the gold mines.","Named by miners after Saint Helena,&lt;br&gt;Minnesota. The native variant name translates&lt;br&gt;as “Possessing Red Paint.”","mining camp named by miners for&lt;br&gt;Jack Wade, prospector;  reported in&lt;br&gt;1903 by T. G. Gerdine (in&lt;br&gt;Prindle, 1905, pl. 16), U.S. Geological&lt;br&gt;Survey (USGS). post  office was&lt;br&gt;established in 1901 and maintained until&lt;br&gt;1948 (Ricks, 1965, p. 29). 1940."],"hoverinfo":["text","text","text","text","text"],"name":"miners","marker":{"color":"rgba(176,208,99,1)","size":[20,20,20,20,20],"sizemode":"area","symbol":"square","line":{"color":"rgba(176,208,99,1)"}},"textfont":{"color":"rgba(176,208,99,1)","size":20},"line":{"color":"rgba(176,208,99,1)","width":20},"geo":"geo","frame":null},{"lat":[66.466388899999998,65.074444400000004,66.5,64.933333300000001],"lon":[-146.90222220000001,-147.2127778,-152.8833333,-141.28333330000001],"type":"scattergeo","mode":"markers","text":["Indian settlement named by prospectors about&lt;br&gt;1898 for the chief; name published&lt;br&gt;on an 1898 manuscript map by&lt;br&gt;E. F. Ball, prospector, as \"White&lt;br&gt;Eye's Camp.\" The 1940 Census gave&lt;br&gt;a population of 15.","Name published in 1907 by U.S.&lt;br&gt;Geological Survey (USGS) as Mehan, an&lt;br&gt;abandoned gold dredging camp. The settlement&lt;br&gt;began about 1905 (Kitchner, 1954, p.&lt;br&gt;297) and was named by prospectors&lt;br&gt;for an early miner, Pat Meehan.&lt;br&gt;A post office was established here&lt;br&gt;in 1906 and maintained until 1942&lt;br&gt;(Ricks, 1965, p. 41).","named by prospectors for the operator&lt;br&gt;of the trading post;  reported&lt;br&gt;in 1899 by T. G. Gerdine&lt;br&gt;(in Schrader, 1900, pl. 60), U.S.&lt;br&gt;Geological Survey (USGS). height of the&lt;br&gt;Koyukuk gold rush because it was&lt;br&gt;a transfer point for supplies and&lt;br&gt;was situated near the head of&lt;br&gt;navigation for the larger riverboats on&lt;br&gt;Koyukuk. abandoned on 1913 map.","Named by prospectors and reported as&lt;br&gt;\"Star City\" in 1897 by Lieutenant&lt;br&gt;W. P. Richardson, USA. A post&lt;br&gt;office was maintained here from 1898&lt;br&gt;to 1902 (Ricks, 1965, p. 60)."],"hoverinfo":["text","text","text","text"],"name":"prospectors","marker":{"color":"rgba(227,217,62,1)","size":[20,20,20,20],"sizemode":"area","symbol":"square","line":{"color":"rgba(227,217,62,1)"}},"textfont":{"color":"rgba(227,217,62,1)","size":20},"line":{"color":"rgba(227,217,62,1)","width":20},"geo":"geo","frame":null},{"lat":[44.4924824,45.333852100000001,55.958888899999998,56.034444399999998],"lon":[-98.349259599999996,-96.763123100000001,-133.24333329999999,-133.49111110000001],"type":"scattergeo","mode":"markers","text":["Named by the owner of the&lt;br&gt;farm adjoining the station, from the&lt;br&gt;broad valley in which the farm&lt;br&gt;and station are located. (SD-T83/ p.&lt;br&gt;47) Incorporated on 5 December 1911.","Established in 1883 and first named&lt;br&gt;by the owner of the town&lt;br&gt;site, C H Prior.  The&lt;br&gt;name was later changed and it&lt;br&gt;is believed to be named for&lt;br&gt;Corona, borough of Queens, New York.&lt;br&gt; (SD-T17/p57)","Local name reported in 1904 by&lt;br&gt;E. F. Dickins, U.S. Coast and&lt;br&gt;Geodetic Survey (USC&amp;GS), who \"Found name&lt;br&gt;on painted sign board over door&lt;br&gt;of Fishery, probably named by owners.\"&lt;br&gt;This place was a fishing station,&lt;br&gt;now abandoned.","This is the site of an&lt;br&gt;abandoned fishing station. Named by the&lt;br&gt;owners and reported in 1904 by&lt;br&gt;E. F. Dickins, U.S. Coast and&lt;br&gt;Geodetic Survey (USC&amp;GS)."],"hoverinfo":["text","text","text","text"],"name":"owners","marker":{"color":"rgba(245,207,100,1)","size":[20,20,20,20],"sizemode":"area","symbol":"square","line":{"color":"rgba(245,207,100,1)"}},"textfont":{"color":"rgba(245,207,100,1)","size":20},"line":{"color":"rgba(245,207,100,1)","width":20},"geo":"geo","frame":null},{"lat":[44.366920100000002,43.839712400000003,43.549974900000002],"lon":[-97.850917100000004,-103.19102049999999,-96.700327000000001],"type":"scattergeo","mode":"markers","text":["Platted in 1880 and named by&lt;br&gt;the Western Town Lot Company for&lt;br&gt;the Iroquois Branch of the Northwestern&lt;br&gt;Railroad. \"Iroquois\" translates to \"heart people\"&lt;br&gt;or \"people of God\" which was&lt;br&gt;applied by the French to the&lt;br&gt;Indian confederacy of the Six Nations.&lt;br&gt;(SD-T17/p72) Incorporated on 26 August 1887.","Descriptive name from the Spanish word&lt;br&gt;meaning \"beautiful\".  Located and named&lt;br&gt;by the Pioneer Town Site Company&lt;br&gt;in 1886.  (SD-T83/P83)","This place was named by the&lt;br&gt;Dakota Land Company for the falls&lt;br&gt;of the Big Sioux River that&lt;br&gt;runs through the place.  (SD-T83/p.&lt;br&gt;192)"],"hoverinfo":["text","text","text"],"name":"company","marker":{"color":"rgba(219,192,155,1)","size":[20,20,20],"sizemode":"area","symbol":"square","line":{"color":"rgba(219,192,155,1)"}},"textfont":{"color":"rgba(219,192,155,1)","size":20},"line":{"color":"rgba(219,192,155,1)","width":20},"geo":"geo","frame":null},{"lat":[44.839686899999997,27.997240999999999],"lon":[-96.689503900000005,-97.060267300000007],"type":"scattergeo","mode":"markers","text":["Named by the surveyor who laid&lt;br&gt;out the town site, because of&lt;br&gt;the hilly country surrounding it. (SD-T83/p.&lt;br&gt;36) Another theory states that this&lt;br&gt;community was named for the person&lt;br&gt;whose farm the town was established&lt;br&gt;on, Ed Altamont. The town was&lt;br&gt;platted in 1880 by the Western&lt;br&gt;Town Lot Company. (SD-T17/p46) Incorporated in&lt;br&gt;1903.","So named by surveyor Arthur A&lt;br&gt;Stiles because his favorite saddle horse&lt;br&gt;fell from one of the cliffs&lt;br&gt;there (TX-T99/R Maxwell)"],"hoverinfo":["text","text"],"name":"surveyor","marker":{"color":"rgba(179,179,179,1)","size":[20,20],"sizemode":"area","symbol":"square","line":{"color":"rgba(179,179,179,1)"}},"textfont":{"color":"rgba(179,179,179,1)","size":20},"line":{"color":"rgba(179,179,179,1)","width":20},"geo":"geo","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}&lt;/script&gt;
-</code></pre> <h2 id="conclusion">Conclusion</h2> <p>This final interactive map is kind of the coolest visualization, because you can actually read the full name history by hovering over locations of interest.</p> <p>My personal favorite comes from my home state of Texas where surveyor Arthur A. Stiles is said to have named a location (Sierra del Caballo Muerto) after his favorite saddle horse, who fell from a cliff there and tragically died. R.I.P.</p> <p>You can learn more about Sierra del Caballo Muerto <a href="https://www.tshaonline.org/handbook/entries/sierra-del-caballo-muerto" rel="external nofollow noopener" target="_blank">here</a>.</p> </body></html>
+</code></pre> <h2 id="conclusion">Conclusion</h2> <p>This final interactive map is kind of the coolest visualization, because you can actually read the full name history by hovering over locations of interest.</p> <p>My personal favorite comes from my home state of Texas where surveyor Arthur A. Stiles is said to have named a location (Sierra del Caballo Muerto) after his favorite saddle horse, who fell from a cliff there and tragically died. R.I.P.</p> <p>You can learn more about Sierra del Caballo Muerto <a href="https://www.tshaonline.org/handbook/entries/sierra-del-caballo-muerto" rel="external nofollow noopener" target="_blank">here</a>.</p> </div> </article> <br> <hr> <br> <h2 class="text-3xl font-semibold mb-4 mt-12">Enjoy Reading This Article?</h2> <p class="mb-2">Here are some more articles you might like to read next:</p> <ul class="list-disc pl-7 my-3 space-y-2 marker:text-[var(--global-theme-color)]"> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2026/Near-Death-Experiences/">Near-Death Experiences</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2025/MTA-Permanent-Art-Catalog/">MTA Permanent Art Catalog</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2025/Funding-for-the-British-Library/">Funding for the British Library</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2023/UFO-Sightings/">UFO Sightings</a> </li> </ul> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Irene Morse. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-teaching",
+          title: "teaching",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/teaching/";
+          },
+        },{id: "nav-research",
+          title: "research",
+          description: "A growing collection of your cool projects.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/research/";
+          },
+        },{id: "nav-cv",
+          title: "cv",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "nav-portfolio",
+          title: "portfolio",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/portfolio/index.html";
+          },
+        },{id: "post-near-death-experiences",
+        
+          title: "Near-Death Experiences",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Near-Death-Experiences/";
+          
+        },
+      },{id: "post-mta-permanent-art-catalog",
+        
+          title: "MTA Permanent Art Catalog",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/MTA-Permanent-Art-Catalog/";
+          
+        },
+      },{id: "post-funding-for-the-british-library",
+        
+          title: "Funding for the British Library",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/Funding-for-the-British-Library/";
+          
+        },
+      },{id: "post-us-populated-places",
+        
+          title: "US Populated Places",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/US-Populated-Places/";
+          
+        },
+      },{id: "post-ufo-sightings",
+        
+          title: "UFO Sightings",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/UFO-Sightings/";
+          
+        },
+      },{id: "news-a-simple-inline-announcement",
+          title: 'A simple inline announcement.',
+          description: "",
+          section: "News",},{id: "news-a-long-announcement-with-details",
+          title: 'A long announcement with details',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_2/";
+            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
+          title: 'A simple inline announcement with Markdown emoji! <img class="emoji" title=":sparkles:" alt=":sparkles:" src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png" height="20" width="20"> <img class="emoji" title=":smile:" alt=":smile:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png" height="20" width="20">',
+          description: "",
+          section: "News",},{id: "projects-green-card-lottery-survey",
+          title: 'Green Card Lottery Survey',
+          description: "Longitudinal survey of Green Card Lottery participants",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/1_project/";
+            },},{id: "projects-turkish-consulate-voter-survey",
+          title: 'Turkish Consulate Voter Survey',
+          description: "Survey and follow-up interviews with Turkish expat voters",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/2_project/";
+            },},{id: "projects-opposition-response-to-term-limit-subversion-and-democratic-backsliding-evidence-from-côte-d-39-ivoire",
+          title: 'Opposition Response to Term Limit Subversion and Democratic Backsliding - Evidence from Côte...',
+          description: "Co-authored with Dr. Justine Davis",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/3_project/";
+            },},{id: "projects-get-out-the-vote-with-violence-online-mobilization-in-violent-elections",
+          title: 'Get Out the Vote with Violence - Online Mobilization in Violent Elections',
+          description: "Co-authored with Dr. Justine Davis",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/4_project/";
+            },},{id: "teachings-quantitative-empirical-methods-of-political-science",
+          title: 'Quantitative Empirical Methods of Political Science',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/f-2019-ps300/";
+            },},{id: "teachings-introduction-to-comparative-politics",
+          title: 'Introduction to Comparative Politics',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/f-2020-ps140/";
+            },},{id: "teachings-introduction-to-public-health-policy",
+          title: 'Introduction to Public Health Policy',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/f-2021-hmp615/";
+            },},{id: "teachings-the-arab-israeli-conflict",
+          title: 'The Arab-Israeli Conflict',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/f-2022-ps353/";
+            },},{id: "teachings-quantitative-empirical-methods-of-political-science",
+          title: 'Quantitative Empirical Methods of Political Science',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/f-2023-ps300/";
+            },},{id: "teachings-the-arab-israeli-conflict",
+          title: 'The Arab-Israeli Conflict',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/f-2024-ps353/";
+            },},{id: "teachings-the-use-of-social-science-computer-programs",
+          title: 'The Use of Social Science Computer Programs',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/f-2025-ps514/";
+            },},{id: "teachings-data-visualization",
+          title: 'Data Visualization',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/icpsr-2023-dataviz/";
+            },},{id: "teachings-data-science-and-text-analysis",
+          title: 'Data Science and Text Analysis',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/icpsr-2024-text/";
+            },},{id: "teachings-introduction-to-computing-for-data-analysis",
+          title: 'Introduction to Computing for Data Analysis',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/icpsr-2025-computing/";
+            },},{id: "teachings-introduction-to-the-latex-text-processing-system",
+          title: 'Introduction to the LaTeX Text Processing System',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/icpsr-2025-latex/";
+            },},{id: "teachings-data-science-and-text-analysis",
+          title: 'Data Science and Text Analysis',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/icpsr-2025-text/";
+            },},{id: "teachings-introduction-to-computing-for-data-analysis",
+          title: 'Introduction to Computing for Data Analysis',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/icpsr-2026-computing/";
+            },},{id: "teachings-introduction-to-the-latex-text-processing-system",
+          title: 'Introduction to the LaTeX Text Processing System',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/icpsr-2026-latex/";
+            },},{id: "teachings-data-science-and-text-analysis",
+          title: 'Data Science and Text Analysis',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/icpsr-2026-text/";
+            },},{id: "teachings-quantitative-empirical-methods-of-political-science",
+          title: 'Quantitative Empirical Methods of Political Science',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/sp-2025-ps300/";
+            },},{id: "teachings-text-as-data",
+          title: 'Text As Data',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/sp-2026-dacss758/";
+            },},{id: "teachings-quantitative-empirical-methods-of-political-science",
+          title: 'Quantitative Empirical Methods of Political Science',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/sp-2026-ps300/";
+            },},{id: "teachings-introduction-to-comparative-politics",
+          title: 'Introduction to Comparative Politics',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/w-2020-ps140/";
+            },},{id: "teachings-introduction-to-world-politics",
+          title: 'Introduction to World Politics',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/w-2021-ps160/";
+            },},{id: "teachings-public-health-systems-policy-and-management",
+          title: 'Public Health Systems, Policy and Management',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/w-2022-pubhlth513/";
+            },},{id: "teachings-the-use-of-social-science-computer-programs",
+          title: 'The Use of Social Science Computer Programs',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/w-2026-ps514/";
+            },},{
+        id: 'social-cv',
+        title: 'CV',
+        section: 'Socials',
+        handler: () => {
+          window.open("/assets/pdf/Irene_Morse_CV_public.pdf", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/irenemorse", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/irene-morse-3a899890", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>
