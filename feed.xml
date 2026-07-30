@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://irenemorse.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://irenemorse.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2026-07-27T15:46:29+00:00</updated><id>https://irenemorse.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">Near-Death Experiences</title><link href="https://irenemorse.github.io/blog/2026/Near-Death-Experiences/" rel="alternate" type="text/html" title="Near-Death Experiences"/><published>2026-07-21T00:00:00+00:00</published><updated>2026-07-21T00:00:00+00:00</updated><id>https://irenemorse.github.io/blog/2026/Near-Death-Experiences</id><content type="html" xml:base="https://irenemorse.github.io/blog/2026/Near-Death-Experiences/"><![CDATA[<h1 id="tidy-tuesday-for-july-21st-2026">Tidy Tuesday for July 21st, 2026</h1> <h2 id="near-death-experiences">Near-Death Experiences</h2> <h3 id="irene-morse">Irene Morse</h3> <h2 id="setup-and-introduction">Setup and Introduction</h2> <p>Acknowledgements: I used GPT-5.5-mini to assist with some elements of this post, especially the code for generating plots.</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://irenemorse.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://irenemorse.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2026-07-30T14:14:52+00:00</updated><id>https://irenemorse.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">Near-Death Experiences</title><link href="https://irenemorse.github.io/blog/2026/Near-Death-Experiences/" rel="alternate" type="text/html" title="Near-Death Experiences"/><published>2026-07-21T00:00:00+00:00</published><updated>2026-07-21T00:00:00+00:00</updated><id>https://irenemorse.github.io/blog/2026/Near-Death-Experiences</id><content type="html" xml:base="https://irenemorse.github.io/blog/2026/Near-Death-Experiences/"><![CDATA[<h1 id="tidy-tuesday-for-july-21st-2026">Tidy Tuesday for July 21st, 2026</h1> <h2 id="near-death-experiences">Near-Death Experiences</h2> <h3 id="irene-morse">Irene Morse</h3> <h2 id="setup-and-introduction">Setup and Introduction</h2> <p>Acknowledgements: I used GPT-5.5-mini to assist with some elements of this post, especially the code for generating plots.</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">pandas</span> <span class="k">as</span> <span class="n">pd</span>
 <span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
 <span class="kn">import</span> <span class="n">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
 <span class="kn">import</span> <span class="n">seaborn</span> <span class="k">as</span> <span class="n">sns</span>
@@ -1299,7 +1299,87 @@ Successfully installed gender-guesser-0.4.0
 </code></pre></div></div> <p>Before running my regression, I have created lagged versions of the GDP variable and unemployment variable. This is to account for the fact that funding changes likely occur <em>after</em> changes in economic health. There is typically a lag as governments adjust to new information about the economy. For example, the government in 2007 must rely on economic indicators from 2006. Therefore lagged variables will allow me to more accurately model the impact of the economy on funding for the library.</p> <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># linear model</span><span class="w">
 </span><span class="n">funding_model</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">lm</span><span class="p">(</span><span class="n">nominal_gbp_millions</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">lagged_gdp_trillions</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">lagged_unemployment</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pm_party</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="o">=</span><span class="n">bl_funding</span><span class="p">)</span><span class="w">
 </span><span class="n">jtools</span><span class="o">::</span><span class="n">summ</span><span class="p">(</span><span class="n">funding_model</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div> <table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;"> <tbody> <tr> <td style="text-align:left;font-weight: bold;"> Observations </td> <td style="text-align:right;"> 25 (1 missing obs. deleted) </td> </tr> <tr> <td style="text-align:left;font-weight: bold;"> Dependent variable </td> <td style="text-align:right;"> nominal_gbp_millions </td> </tr> <tr> <td style="text-align:left;font-weight: bold;"> Type </td> <td style="text-align:right;"> OLS linear regression </td> </tr> </tbody> </table> <table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;"> <tbody> <tr> <td style="text-align:left;font-weight: bold;"> F(3,21) </td> <td style="text-align:right;"> 9.31 </td> </tr> <tr> <td style="text-align:left;font-weight: bold;"> R² </td> <td style="text-align:right;"> 0.57 </td> </tr> <tr> <td style="text-align:left;font-weight: bold;"> Adj. R² </td> <td style="text-align:right;"> 0.51 </td> </tr> </tbody> </table> <table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0;"> <thead> <tr> <th style="text-align:left;"> </th> <th style="text-align:right;"> Est. </th> <th style="text-align:right;"> S.E. </th> <th style="text-align:right;"> t val. </th> <th style="text-align:right;"> p </th> </tr> </thead> <tbody> <tr> <td style="text-align:left;font-weight: bold;"> (Intercept) </td> <td style="text-align:right;"> 147.50 </td> <td style="text-align:right;"> 13.37 </td> <td style="text-align:right;"> 11.03 </td> <td style="text-align:right;"> 0.00 </td> </tr> <tr> <td style="text-align:left;font-weight: bold;"> lagged_gdp_trillions </td> <td style="text-align:right;"> -21.81 </td> <td style="text-align:right;"> 4.96 </td> <td style="text-align:right;"> -4.40 </td> <td style="text-align:right;"> 0.00 </td> </tr> <tr> <td style="text-align:left;font-weight: bold;"> lagged_unemployment </td> <td style="text-align:right;"> 5.51 </td> <td style="text-align:right;"> 1.47 </td> <td style="text-align:right;"> 3.74 </td> <td style="text-align:right;"> 0.00 </td> </tr> <tr> <td style="text-align:left;font-weight: bold;"> pm_partyLabour </td> <td style="text-align:right;"> 18.59 </td> <td style="text-align:right;"> 5.15 </td> <td style="text-align:right;"> 3.61 </td> <td style="text-align:right;"> 0.00 </td> </tr> </tbody> <tfoot><tr><td style="padding: 0; " colspan="100%"> <sup></sup> Standard errors: OLS</td></tr></tfoot> </table> <p>The linear regression indicates that all three variables of interest have a statistically significant relationship with funding for the British Library. Interestingly, the health of the economy appears to be inversely related with British Library funding; higher GDP and lower unemployment are associated with <em>decreased</em> funding for the British Library. It is not immediately clear to me why this would be the case, but perhaps during stronger economic periods Parliament is able to justify decreases in government funding by arguing that the library can rely on other sources of funding. The political party variable is more readily interpretable with the Labour party clearly associated with increased funding for the library.</p> <h2 id="conclusion">Conclusion</h2> <p>My proposed hypotheses proved fruitful for understanding changes in British Library funding over time. It is clear that political party priorities do affect funding, with the Labour party more willing to fund the library. Additionally, the health of the economy has a notable impact, though it is the opposite of what I might have guessed. Further investigation of more micro-level economic indicators or of Parliamentary debate regarding British Library funding might help reveal the mechanisms behind this inverse relationship.</p>]]></content><author><name>Irene Morse</name></author><category term="tidytuesday"/><category term="tidytuesday"/><summary type="html"><![CDATA[Setup and Introduction]]></summary></entry><entry><title type="html">US Populated Places</title><link href="https://irenemorse.github.io/blog/2023/US-Populated-Places/" rel="alternate" type="text/html" title="US Populated Places"/><published>2023-06-27T00:00:00+00:00</published><updated>2023-06-27T00:00:00+00:00</updated><id>https://irenemorse.github.io/blog/2023/US-Populated-Places</id><content type="html" xml:base="https://irenemorse.github.io/blog/2023/US-Populated-Places/"><![CDATA[<script src="https://cdn.plot.ly/plotly-latest.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/htmlwidgets@1.6.4/dist/htmlwidgets.js"></script> <h2 id="setup-and-introduction">Setup and Introduction</h2> <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">tidytuesdayR</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div> <table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;"> <tbody> <tr> <td style="text-align:left;font-weight: bold;"> Observations </td> <td style="text-align:right;"> 25 (1 missing obs. deleted) </td> </tr> <tr> <td style="text-align:left;font-weight: bold;"> Dependent variable </td> <td style="text-align:right;"> nominal_gbp_millions </td> </tr> <tr> <td style="text-align:left;font-weight: bold;"> Type </td> <td style="text-align:right;"> OLS linear regression </td> </tr> </tbody> </table> <table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;"> <tbody> <tr> <td style="text-align:left;font-weight: bold;"> F(3,21) </td> <td style="text-align:right;"> 9.31 </td> </tr> <tr> <td style="text-align:left;font-weight: bold;"> R² </td> <td style="text-align:right;"> 0.57 </td> </tr> <tr> <td style="text-align:left;font-weight: bold;"> Adj. R² </td> <td style="text-align:right;"> 0.51 </td> </tr> </tbody> </table> <table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0;"> <thead> <tr> <th style="text-align:left;"> </th> <th style="text-align:right;"> Est. </th> <th style="text-align:right;"> S.E. </th> <th style="text-align:right;"> t val. </th> <th style="text-align:right;"> p </th> </tr> </thead> <tbody> <tr> <td style="text-align:left;font-weight: bold;"> (Intercept) </td> <td style="text-align:right;"> 147.50 </td> <td style="text-align:right;"> 13.37 </td> <td style="text-align:right;"> 11.03 </td> <td style="text-align:right;"> 0.00 </td> </tr> <tr> <td style="text-align:left;font-weight: bold;"> lagged_gdp_trillions </td> <td style="text-align:right;"> -21.81 </td> <td style="text-align:right;"> 4.96 </td> <td style="text-align:right;"> -4.40 </td> <td style="text-align:right;"> 0.00 </td> </tr> <tr> <td style="text-align:left;font-weight: bold;"> lagged_unemployment </td> <td style="text-align:right;"> 5.51 </td> <td style="text-align:right;"> 1.47 </td> <td style="text-align:right;"> 3.74 </td> <td style="text-align:right;"> 0.00 </td> </tr> <tr> <td style="text-align:left;font-weight: bold;"> pm_partyLabour </td> <td style="text-align:right;"> 18.59 </td> <td style="text-align:right;"> 5.15 </td> <td style="text-align:right;"> 3.61 </td> <td style="text-align:right;"> 0.00 </td> </tr> </tbody> <tfoot><tr><td style="padding: 0; " colspan="100%"> <sup></sup> Standard errors: OLS</td></tr></tfoot> </table> <p>The linear regression indicates that all three variables of interest have a statistically significant relationship with funding for the British Library. Interestingly, the health of the economy appears to be inversely related with British Library funding; higher GDP and lower unemployment are associated with <em>decreased</em> funding for the British Library. It is not immediately clear to me why this would be the case, but perhaps during stronger economic periods Parliament is able to justify decreases in government funding by arguing that the library can rely on other sources of funding. The political party variable is more readily interpretable with the Labour party clearly associated with increased funding for the library.</p> <h2 id="conclusion">Conclusion</h2> <p>My proposed hypotheses proved fruitful for understanding changes in British Library funding over time. It is clear that political party priorities do affect funding, with the Labour party more willing to fund the library. Additionally, the health of the economy has a notable impact, though it is the opposite of what I might have guessed. Further investigation of more micro-level economic indicators or of Parliamentary debate regarding British Library funding might help reveal the mechanisms behind this inverse relationship.</p>]]></content><author><name>Irene Morse</name></author><category term="tidytuesday"/><category term="tidytuesday"/><summary type="html"><![CDATA[Setup and Introduction]]></summary></entry><entry><title type="html">a post with plotly.js</title><link href="https://irenemorse.github.io/blog/2025/plotly/" rel="alternate" type="text/html" title="a post with plotly.js"/><published>2025-03-26T14:24:00+00:00</published><updated>2025-03-26T14:24:00+00:00</updated><id>https://irenemorse.github.io/blog/2025/plotly</id><content type="html" xml:base="https://irenemorse.github.io/blog/2025/plotly/"><![CDATA[<p>This is an example post with some <a href="https://plotly.com/javascript/">plotly</a> code.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">plotly
+</span><span class="sb">{
+  "data": [
+    {
+      "x": [1, 2, 3, 4],
+      "y": [10, 15, 13, 17],
+      "type": "scatter"
+    },
+    {
+      "x": [1, 2, 3, 4],
+      "y": [16, 5, 11, 9],
+      "type": "scatter"
+    }
+  ]
+}</span>
+<span class="p">```</span>
+</code></pre></div></div> <p>Which generates:</p> <pre><code class="language-plotly">{
+  "data": [
+    {
+      "x": [1, 2, 3, 4],
+      "y": [10, 15, 13, 17],
+      "type": "scatter"
+    },
+    {
+      "x": [1, 2, 3, 4],
+      "y": [16, 5, 11, 9],
+      "type": "scatter"
+    }
+  ]
+}
+</code></pre> <p>Also another example chart.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">plotly
+</span><span class="sb">{
+  "data": [
+    {
+      "x": [1, 2, 3, 4],
+      "y": [10, 15, 13, 17],
+      "mode": "markers"
+    },
+    {
+      "x": [2, 3, 4, 5],
+      "y": [16, 5, 11, 9],
+      "mode": "lines"
+    },
+    {
+      "x": [1, 2, 3, 4],
+      "y": [12, 9, 15, 12],
+      "mode": "lines+markers"
+    }
+  ],
+  "layout": {
+    "title": {
+      "text": "Line and Scatter Plot"
+    }
+  }
+}</span>
+<span class="p">```</span>
+</code></pre></div></div> <p>This is how it looks like:</p> <pre><code class="language-plotly">{
+  "data": [
+    {
+      "x": [1, 2, 3, 4],
+      "y": [10, 15, 13, 17],
+      "mode": "markers"
+    },
+    {
+      "x": [2, 3, 4, 5],
+      "y": [16, 5, 11, 9],
+      "mode": "lines"
+    },
+    {
+      "x": [1, 2, 3, 4],
+      "y": [12, 9, 15, 12],
+      "mode": "lines+markers"
+    }
+  ],
+  "layout": {
+    "title": {
+      "text": "Line and Scatter Plot"
+    }
+  }
+}
+</code></pre>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="charts"/><summary type="html"><![CDATA[this is what included plotly.js code could look like]]></summary></entry><entry><title type="html">US Populated Places</title><link href="https://irenemorse.github.io/blog/2023/US-Populated-Places/" rel="alternate" type="text/html" title="US Populated Places"/><published>2023-06-27T00:00:00+00:00</published><updated>2023-06-27T00:00:00+00:00</updated><id>https://irenemorse.github.io/blog/2023/US-Populated-Places</id><content type="html" xml:base="https://irenemorse.github.io/blog/2023/US-Populated-Places/"><![CDATA[<script src="https://cdn.plot.ly/plotly-latest.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/htmlwidgets@1.6.4/dist/htmlwidgets.js"></script> <h2 id="setup-and-introduction">Setup and Introduction</h2> <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">tidytuesdayR</span><span class="p">)</span><span class="w">
 </span><span class="n">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span><span class="w">
 </span><span class="n">library</span><span class="p">(</span><span class="n">ggthemes</span><span class="p">)</span><span class="w">
 </span><span class="n">library</span><span class="p">(</span><span class="n">tidygeocoder</span><span class="p">)</span><span class="w">
